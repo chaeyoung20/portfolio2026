@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Chaeyoung Portfolio — UI/UX Designer',
   description: 'Thoughtful UI/UX design and digital experiences by Chaeyoung.',
+  icons: { icon: '/favicon.png' },
 };
 
 export default function RootLayout({
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <script dangerouslySetInnerHTML={{__html:`document.addEventListener('DOMContentLoaded',()=>{const o=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('is-visible')),{threshold:.12});document.querySelectorAll('.works .project').forEach(e=>o.observe(e));});`}} />
         {children}
       </body>
     </html>
