@@ -25,7 +25,7 @@ jobs:
         run: |
           for file in dist/client/_next/static/css/*.css dist/client/*.html dist/client/*.rsc; do
             [ -f "$file" ] || continue
-            sed -i -e 's#url(/#url(/portfolio.com/#g' -e 's#href="/#href="/portfolio.com/#g' "$file"
+            sed -i -e 's#url(/#url(/portfolio2026/#g' -e 's#href="/#href="/portfolio2026/#g' "$file"
           done
       - uses: actions/upload-pages-artifact@v3
         with:
