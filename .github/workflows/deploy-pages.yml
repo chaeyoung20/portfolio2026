@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -23,10 +23,12 @@ jobs:
       - run: npm run build
       - name: Fix public asset paths for project Pages
         run: |
-          for file in dist/client/_next/static/css/*.css dist/client/*.html dist/client/*.rsc; do
-            [ -f "$file" ] || continue
-            sed -i -e 's#url(/#url(/portfolio2026/#g' -e 's#href="/#href="/portfolio2026/#g' "$file"
-          done
+          Get-ChildItem dist/client -Recurse -File -Include *.html,*.css,*.rsc | ForEach-Object {
+            $content = Get-Content $_.FullName -Raw
+            $content = $content -replace 'url\(/', 'url(/portfolio2026/'
+            $content = $content -replace 'href="/', 'href="/portfolio2026/'
+            Set-Content $_.FullName $content -NoNewline
+          }
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist/client
@@ -35,7 +37,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     needs: build
     steps:
       - id: deployment
