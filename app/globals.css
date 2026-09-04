@@ -151,3 +151,23 @@ body:has(.detail-page){background-image:none}
   }
   .detail-art.lg-beta img{width:100%;max-width:100%;height:auto;}
 }
+
+@media (max-width:700px){
+  /* Mobile detail header: hide the desktop-only CP mark. */
+  .detail-nav .wordmark{display:none;}
+  .detail-nav{justify-content:flex-end;}
+  /* Long portfolio boards must fit the viewport without horizontal overflow. */
+  .detail-page{width:100%;overflow-x:hidden;}
+  .detail-page .detail-grid{width:calc(100% - 36px);max-width:calc(100% - 36px);margin:0 auto;}
+  .detail-page .detail-left{width:100%;max-width:100%;overflow:hidden;}
+  .detail-page .detail-art{width:100%;max-width:100%;box-sizing:border-box;}
+  .detail-page .detail-art.haru-dal,
+  .detail-page .detail-art.local-star,
+  .detail-page .detail-art.fiton,
+  .detail-page .detail-art.im-bank,
+  .detail-page .detail-art.campus-pay,
+  .detail-page .detail-art.lg-icons,
+  .detail-page .detail-art.lg-overlay,
+  .detail-page .detail-art.lg-cdc,
+  .detail-page .detail-art.ax-nexus{background-size:100% auto!important;}
+}
