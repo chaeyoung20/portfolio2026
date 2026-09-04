@@ -145,3 +145,7 @@ body:has(.detail-page){background-image:none}
 .project-info i .svg-arrow{width:15px;height:15px;}
 .email .svg-arrow,.phone .svg-arrow{width:16px;height:16px;margin-left:4px;}
 .next-work .svg-arrow{width:18px;height:18px;}
+.svg-arrow{transform:rotate(-45deg)}
+.circle-arrow .svg-arrow{transform:rotate(45deg)}
+.back .svg-arrow{transform:rotate(180deg)}
+.scroll-note .svg-arrow{transform:rotate(90deg)}
