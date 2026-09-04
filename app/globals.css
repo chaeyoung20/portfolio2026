@@ -171,3 +171,13 @@ body:has(.detail-page){background-image:none}
   .detail-page .detail-art.lg-cdc,
   .detail-page .detail-art.ax-nexus{background-size:100% auto!important;}
 }
+
+html,body{max-width:100%;overflow-x:hidden;}
+@media (max-width:767px){
+  .detail-nav .wordmark{display:none!important;width:0!important;margin:0!important;padding:0!important;}
+  .detail-nav{justify-content:flex-end;}
+  .detail-grid,.detail-left,.detail-art{width:100%;max-width:100%;min-width:0;}
+  .detail-art{overflow:hidden;}
+  .detail-art img{width:100%!important;max-width:100%!important;height:auto!important;}
+  .detail-art.haru-dal,.detail-art.local-star,.detail-art.fiton,.detail-art.im-bank,.detail-art.campus-pay,.detail-art.lg-icons,.detail-art.lg-overlay,.detail-art.lg-cdc,.detail-art.ax-nexus{background-size:100% auto!important;}
+}
