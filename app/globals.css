@@ -166,7 +166,7 @@ html,body{max-width:100%;overflow-x:hidden}
   .detail-art{overflow:hidden}
   .detail-art img{display:block;width:100%;max-width:100%;height:auto}
   .detail-art.haru-dal,.detail-art.local-star,.detail-art.fiton,.detail-art.im-bank,.detail-art.campus-pay,.detail-art.lg-icons,.detail-art.lg-overlay,.detail-art.lg-cdc,.detail-art.ax-nexus{background-size:100% auto}
-  .detail-copy h1,.detail-copy h2,.detail-body{max-width:100%;overflow-wrap:anywhere;word-break:break-word}
+  .detail-copy h1,.detail-copy h2,.detail-body{max-width:100%;overflow-wrap:anywhere;word-break:keep-all}
 }
 @media (max-width:767px){
   .detail-grid:has(.detail-art.haru-dal) .detail-copy h2,
@@ -175,6 +175,6 @@ html,body{max-width:100%;overflow-x:hidden}
     white-space:normal;
     max-width:100%;
     overflow-wrap:anywhere;
-    word-break:break-word;
+    word-break:keep-all;
   }
 }
