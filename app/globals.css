@@ -168,3 +168,13 @@ html,body{max-width:100%;overflow-x:hidden}
   .detail-art.haru-dal,.detail-art.local-star,.detail-art.fiton,.detail-art.im-bank,.detail-art.campus-pay,.detail-art.lg-icons,.detail-art.lg-overlay,.detail-art.lg-cdc,.detail-art.ax-nexus{background-size:100% auto}
   .detail-copy h1,.detail-copy h2,.detail-body{max-width:100%;overflow-wrap:anywhere;word-break:break-word}
 }
+@media (max-width:767px){
+  .detail-grid:has(.detail-art.haru-dal) .detail-copy h2,
+  .detail-grid:has(.detail-art.local-star) .detail-copy h2,
+  .detail-grid:has(.detail-art.campus-pay) .detail-copy h2{
+    white-space:normal;
+    max-width:100%;
+    overflow-wrap:anywhere;
+    word-break:break-word;
+  }
+}
