@@ -137,3 +137,11 @@ body:has(.detail-page){background-image:none}
 /* Keep navigation arrows as text icons on mobile instead of emoji glyphs. */
 .circle-arrow,.project-info i,.email span,.phone span,.next-work span{font-family:Arial,Helvetica,sans-serif;font-variant-emoji:text;}
 @media(max-width:700px){.detail-nav{height:70px}.detail-nav .wordmark{font-size:22px}.detail-nav .back{font-size:11px}.detail-copy{padding-top:32px}.detail-art{width:100%;}.detail-art img{max-width:100%;height:auto;display:block;}}
+
+/* Inline SVG arrows keep the same appearance on every device. */
+.svg-arrow{display:inline-block;width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.25;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle;}
+.circle-arrow .svg-arrow{width:22px;height:22px;transform:rotate(45deg);}
+.arrow-icon{display:none;}
+.project-info i .svg-arrow{width:15px;height:15px;}
+.email .svg-arrow,.phone .svg-arrow{width:16px;height:16px;margin-left:4px;}
+.next-work .svg-arrow{width:18px;height:18px;}
