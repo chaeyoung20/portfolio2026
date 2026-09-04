@@ -133,3 +133,7 @@ body:has(.detail-page){background-image:none}
 .works{background:#f1f1f1f0}
 .detail-page .detail-art.lg-overlay{aspect-ratio:1920 / 13158;background-image:url('/lg-overlay.webp')}
 .works .project-list .project:nth-child(4) .project-visual span{color:#fff}
+
+/* Keep navigation arrows as text icons on mobile instead of emoji glyphs. */
+.circle-arrow,.project-info i,.email span,.phone span,.next-work span{font-family:Arial,Helvetica,sans-serif;font-variant-emoji:text;}
+@media(max-width:700px){.detail-nav{height:70px}.detail-nav .wordmark{font-size:22px}.detail-nav .back{font-size:11px}.detail-copy{padding-top:32px}.detail-art{width:100%;}.detail-art img{max-width:100%;height:auto;display:block;}}
