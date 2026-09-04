@@ -149,3 +149,31 @@ body:has(.detail-page){background-image:none}
 .circle-arrow .svg-arrow{transform:rotate(45deg)}
 .back .svg-arrow{transform:rotate(180deg)}
 .scroll-note .svg-arrow{transform:rotate(90deg)}
+
+@media (max-width:767px){
+  .detail-page,
+  .detail-page .detail-grid,
+  .detail-page .detail-art.haru-dal,
+  .detail-page .detail-art.local-star{
+    width:100%;
+    max-width:100%;
+    min-width:0;
+    overflow-x:hidden;
+  }
+  .detail-page .detail-art.haru-dal,
+  .detail-page .detail-art.local-star{
+    background-size:100% auto;
+    background-position:top center;
+    overflow:hidden;
+  }
+  .detail-grid:has(.detail-art.haru-dal) .detail-copy h2,
+  .detail-grid:has(.detail-art.local-star) .detail-copy h2,
+  .detail-grid:has(.detail-art.campus-pay) .detail-copy h2{
+    white-space:normal;
+    width:100%;
+    max-width:100%;
+    overflow-wrap:break-word;
+    word-break:keep-all;
+  }
+  .detail-page .detail-copy{width:100%;max-width:100%;min-width:0;}
+}
