@@ -152,46 +152,19 @@ body:has(.detail-page){background-image:none}
   .detail-art.lg-beta img{width:100%;max-width:100%;height:auto;}
 }
 
-@media (max-width:700px){
-  /* Mobile detail header: hide the desktop-only CP mark. */
-  .detail-nav .wordmark{display:none;}
-  .detail-nav{justify-content:flex-end;}
-  /* Long portfolio boards must fit the viewport without horizontal overflow. */
-  .detail-page{width:100%;overflow-x:hidden;}
-  .detail-page .detail-grid{width:calc(100% - 36px);max-width:calc(100% - 36px);margin:0 auto;}
-  .detail-page .detail-left{width:100%;max-width:100%;overflow:hidden;}
-  .detail-page .detail-art{width:100%;max-width:100%;box-sizing:border-box;}
-  .detail-page .detail-art.haru-dal,
-  .detail-page .detail-art.local-star,
-  .detail-page .detail-art.fiton,
-  .detail-page .detail-art.im-bank,
-  .detail-page .detail-art.campus-pay,
-  .detail-page .detail-art.lg-icons,
-  .detail-page .detail-art.lg-overlay,
-  .detail-page .detail-art.lg-cdc,
-  .detail-page .detail-art.ax-nexus{background-size:100% auto!important;}
-}
-
-html,body{max-width:100%;overflow-x:hidden;}
+/* Responsive detail-page adjustments, kept in one place. */
+html,body{max-width:100%;overflow-x:hidden}
+.detail-nav .wordmark::before{content:none}
+.detail-nav .wordmark{font-size:25px;font-weight:800;letter-spacing:-.08em;color:inherit}
+.detail-nav .wordmark span{display:inline;font-weight:400;margin-left:5px}
 @media (max-width:767px){
-  .detail-nav .wordmark{display:none!important;width:0!important;margin:0!important;padding:0!important;}
-  .detail-nav{justify-content:flex-end;}
-  .detail-grid,.detail-left,.detail-art{width:100%;max-width:100%;min-width:0;}
-  .detail-art{overflow:hidden;}
-  .detail-art img{width:100%!important;max-width:100%!important;height:auto!important;}
-  .detail-art.haru-dal,.detail-art.local-star,.detail-art.fiton,.detail-art.im-bank,.detail-art.campus-pay,.detail-art.lg-icons,.detail-art.lg-overlay,.detail-art.lg-cdc,.detail-art.ax-nexus{background-size:100% auto!important;}
-}
-
-/* Detail header: keep CY visible and remove only the trailing mark on mobile. */
-.detail-nav .wordmark::before{content:none!important;}
-.detail-nav .wordmark{font-size:25px!important;}
-@media (max-width:767px){
-  .detail-nav .wordmark{display:block!important;width:auto!important;margin:0!important;padding:0!important;font-size:22px!important;}
-  .detail-nav .wordmark span{display:none!important;}
-  .detail-nav{justify-content:space-between;}
-  .detail-copy,.detail-copy h1,.detail-copy h2,.detail-body{min-width:0;max-width:100%;overflow-wrap:anywhere;word-break:break-word;}
-}
-
-@media (max-width:767px){
-  .detail-grid{gap:0!important;}
+  .detail-nav{justify-content:space-between}
+  .detail-nav .wordmark{display:block;width:auto;margin:0;padding:0;font-size:25px}
+  .detail-nav .wordmark span{display:inline}
+  .detail-grid{width:calc(100% - 36px);max-width:calc(100% - 36px);min-width:0;margin:0 auto;gap:0}
+  .detail-left,.detail-art,.detail-copy{width:100%;max-width:100%;min-width:0}
+  .detail-art{overflow:hidden}
+  .detail-art img{display:block;width:100%;max-width:100%;height:auto}
+  .detail-art.haru-dal,.detail-art.local-star,.detail-art.fiton,.detail-art.im-bank,.detail-art.campus-pay,.detail-art.lg-icons,.detail-art.lg-overlay,.detail-art.lg-cdc,.detail-art.ax-nexus{background-size:100% auto}
+  .detail-copy h1,.detail-copy h2,.detail-body{max-width:100%;overflow-wrap:anywhere;word-break:break-word}
 }
