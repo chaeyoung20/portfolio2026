@@ -16,8 +16,7 @@
 .about .about-statement strong{color:inherit;background:transparent;padding:0}.about .about-statement strong:first-child{color:#111;background:#acf2bd;padding:0 .12em}
 .project-list .project:nth-child(1) .project-visual b,.project-list .project:nth-child(2) .project-visual b{font-size:0}.project-list .project:nth-child(1) .project-visual b::after{content:'LG CDC';font-size:clamp(48px,10vw,140px)}.project-list .project:nth-child(2) .project-visual b::after{content:'LG BETA';font-size:clamp(48px,10vw,140px)}
 .project-list .project:nth-child(2) .project-visual b::after{font-size:clamp(38px,7vw,100px)}
-.detail-nav .wordmark{font-size:0}.detail-nav .wordmark::before{content:'CY';font-size:25px}
-.detail-nav .wordmark::before{content:'CY—'}
+.detail-nav .wordmark{font-size:25px}
 .contact .email::after{content:'010-4233-8053';margin-left:40px}
 .contact .email::after{display:inline-block;border-bottom:1px solid var(--black);padding-bottom:9px}
 .contact .email::after{content:'010-4233-8053  ↗';margin-left:40px;display:inline-block;border-bottom:1px solid var(--black);padding-bottom:9px;font-size:17px}
@@ -155,7 +154,6 @@ body:has(.detail-page){background-image:none}
   .detail-page .detail-grid,
   .detail-page .detail-art.haru-dal,
   .detail-page .detail-art.local-star{
-    width:100%;
     max-width:100%;
     min-width:0;
     overflow-x:hidden;
