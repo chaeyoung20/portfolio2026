@@ -157,6 +157,7 @@ body:has(.detail-page){background-image:none}
     max-width:100%;
     min-width:0;
     overflow-x:hidden;
+    overflow-y: hidden;
   }
   .detail-page .detail-art.haru-dal,
   .detail-page .detail-art.local-star{
