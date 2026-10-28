@@ -75,7 +75,7 @@ export default function Home() {
     <main>
       <nav className="nav shell">
         <a className="wordmark" href="#top">
-          UI/UX Design<span>—</span>
+          Design<span>—</span>
         </a>
         <div className="nav-links">
           <a href="#about">About</a>
